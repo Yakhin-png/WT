@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>ЯХИН ПИ320</title>
+	<style>
+		body {
+			background-color: royalblue;
+		}
+		.container {
+			background-color: snow;
+			border: 5px solid steelblue;
+			border-radius: 5px;
+			padding: 20px;
+		}
+		a {
+			font-size: larger;
+			color: royalblue;
+		}
+		.button {
+			border: 5px solid steelblue;
+			background-color: steelblue;
+			border-radius: 5px;
+			color: snow;
+			padding: 10px;
+			font-size: larger;
+		}
+		.zapis {
+			border: 5px solid steelblue;
+			margin: 20px;
+			padding: 20px;
+			background-color: lightsteelblue;
+			width: 600px;
+		}
+		img {
+			margin: 6px;
+		}
+		.comm {
+			border: 5px solid steelblue;
+			background-color: lightgoldenrodyellow;
+			border-radius: 5px;
+			color: black;
+			padding: 10px;
+			font-size: larger;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+<h1>Яхин А.Р.</h1>
+	<h2>Запись на стене</h2>
+	<div class="zapis">
+		<h3 style="text-align: center;">Яхин Азамат</h3>
+		<p>Всем привет, подписчики! <br>Смотрите, какую тачку купил! Как вам?)))</p>
+		<img src="https://img3.goodfon.ru/wallpaper/nbig/3/b1/kamaro-camaro-2014-ss-krasnyy.jpg" alt="тачка" width="550px">
+	</div>
+	<h2>Комментарии: </h2>
+	<div class="comm">
+		<h3>Оставьте свой комментарий</h3>
+		<form method="get">
+			<p><b>Имя: </b><input type="text" name="name" size="50" id="name"/></p>
+			<p><b>EMAIL: </b><input type="email" name="email" size="30" id="email"/></p>
+			<p><b>Комментарий: </b><input type="text" name="name" size="70" id="new"/></textarea></p>
+			<input onclick = "ot(this.value)" type="button" value="Отправить" class="button"/>
+		</form>
+	</div>
+    <br>
+	<span id = "comment"></span> 
+</div>
+<script>
+	let tek = 3;
+	window.addEventListener("load",function() {
+  var request = new XMLHttpRequest();
+  request.open('GET','getotziv.php',true);
+  request.addEventListener('readystatechange', function() {
+    if ((request.readyState==4) && (request.status==200)) {
+      var welcome = document.getElementById('comment');
+      welcome.innerHTML = request.responseText;
+    }
+  });
+request.send();
+});
+    function showRSS(str) {
+		if (str.length==0) {
+    document.getElementById("comment").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else {  
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("comment").innerHTML=this.responseText;
+    }
+  }
+  tek+=1;
+  var nam = document.getElementById("name").value, email = document.getElementById("email").value, otz=document.getElementById("new").value;
+var variables = "tek="+tek+"&name="+nam+"&email="+email+"&otz="+otz;
+			   xmlhttp.open("GET","otziv.php?"+variables,true);
+			   xmlhttp.send();
+}
+</script>
+	</div>
+</body>
+</html> 

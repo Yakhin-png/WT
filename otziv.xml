@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spisok>
+   <otziv>
+      <name>
+         Олег Иванов
+      </name>
+      <email>
+         oleggg@mail.ru
+      </email>
+      <otz>
+        Поздравляю, друг! Тачка - огонь!
+      </otz>
+   </otziv>
+   <otziv>
+      <name>
+         Виктор Сидоров
+      </name>
+      <email>
+         vityaaaa@mail.ru
+      </email>
+      <otz>
+        Ого-го!!! мечта, а не машина))
+      </otz>
+   </otziv>
+   <otziv>
+      <name>
+         Тимур Абдуллин
+      </name>
+      <email>
+         timuuurrrr@mail.ru
+      </email>
+      <otz>
+         Пошли кататься!
+      </otz>
+   </otziv>
+</spisok>

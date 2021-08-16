@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>ЯХИН ПИ320</title>
+	<style>
+		body {
+			background-color: royalblue;
+		}
+		.container {
+			background-color: snow;
+			border: 5px solid steelblue;
+			border-radius: 5px;
+			padding: 20px;
+		}
+		a {
+			font-size: larger;
+			color: royalblue;
+		}
+		.button {
+			border: 5px solid steelblue;
+			background-color: steelblue;
+			border-radius: 5px;
+			color: snow;
+			padding: 10px;
+			font-size: larger;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+<h1>Яхин А.Р.</h1>
+					<h3>Точка невозврата</h3>
+					<p>Глобальную климатическую катастрофу признали неизбежной. Что человечество может сделать для спасения?</p><br>
+					<img src="https://icdn.lenta.ru/images/2021/08/12/23/20210812232632769/detail_bfc53d36a1a53ef4fb2549b5fb267331.jpg" alt="" width="400px">
+					<br>
+					<h3>«Не нравится мне все это!»</h3>
+					<p>Россиянин побывал в Нью-Йорке и увидел, как русские выживают в США и обманывают систему</p><br>
+					<img src="https://icdn.lenta.ru/images/2021/06/22/18/20210622180953730/detail_9fab796019dbb6c8da30316a35fb063b.jpg" alt="" width="400px">
+					<br>
+					<h3>«Мы ошиблись»</h3>
+					<p>Французы создали интернет и пользовались им раньше всех на планете. Что погубило их революционный проект?</p><br>
+					<img src="https://icdn.lenta.ru/images/2021/08/03/17/20210803174254453/detail_9c95d63b09c3eb5653465f66d1efe91a.jpg" alt="" width="400px">
+					<br>
+					<h3>Причиной взрыва автобуса в Воронеже назвали газовый баллон</h3>
+					<p>В результате ЧП погибли два пассажира и пострадали 20 человек</p><br>
+					<img src="https://icdn.lenta.ru/images/2021/08/13/11/20210813110939552/pic_0c40b14f9fddc29202e3ed7f856e6895.jpg" alt="" width="400px">
+					<br>
+					<span id = "rssOutput"></span>
+					<form>
+						<input onclick="showRSS(this.value)" class="button" type="button" value="загрузить ещё">
+					</form>
+					<script>
+						let tek = 5;
+						function showRSS(str) {
+							if (str.length==0) {
+				document.getElementById("rssOutput").innerHTML="";
+				return;
+			  }
+			  if (window.XMLHttpRequest) {
+				
+				xmlhttp=new XMLHttpRequest();
+			  } else {  
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			  xmlhttp.onreadystatechange=function() {
+				if (this.readyState==4 && this.status==200) {
+				  document.getElementById("rssOutput").innerHTML=this.responseText;
+				}
+			  }
+						   xmlhttp.open("GET","rss.php?tek="+tek,true);
+						   xmlhttp.send();
+						   tek+=5;
+						}
+					 </script>
+					 </div>
+			</body>
+	</html> 
