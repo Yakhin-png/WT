@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>ЯХИН ПИ320</title>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<style>
+		body {
+			background-color: royalblue;
+		}
+		.container {
+			background-color: snow;
+			border: 5px solid steelblue;
+			border-radius: 5px;
+			padding: 20px;
+		}
+		a {
+			font-size: larger;
+			color: royalblue;
+		}
+		.button {
+			border: 5px solid steelblue;
+			background-color: steelblue;
+			border-radius: 5px;
+			color: snow;
+			padding: 10px;
+			font-size: larger;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+<h1>Яхин А.Р.</h1>
+<h3>Покупайте аксессуары для авто у нас!</h3>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+<span id="accordion">
+    <h3>FrauDiamant / Оплетка на руль / чехол для руля / оплётка со стразами</h3> <div>
+        <p>
+			Роскошная женская оплётка на руль, усыпанная по окружности переливающимися цветными стразами. Материал изделия - искусственная замша. Удобная, прочная, предотвращает скольжение. <br>
+		<br>
+			<b>Материал оплетки: </b>стразы; искусственная замша<br>
+			<b>Вес товара с упаковкой (г): </b>500 г <br>
+			<b>Диаметр предмета: </b>38 см
+	</p>
+	<p>Цена <b>1 520 руб</b></p>
+    </div> 
+    <h3>LuxCase / Автомобильный держатель телефона с креплением в решетку обдува / телескопический / раздвижной </h3> <div>
+        <p>
+		Автомобильный держатель телефона с креплением в решетку обдува / телескопический / раздвижной от LuxCase. <br> Преимущества: <br>- Телескопический штатив поможет удобно расположить смартфон<br> - Регулировка наклона и поворота на 360 градусов <br>- Удерживающие элементы прорезинены и не оставят следов на устройстве. <br>
+		- Надежно удерживает устройства с диагональю до 6 дюймов (более крупные могут фиксироваться ненадежно).
+        </p>
+		<p>Цена <b>539 руб</b></p>
+    </div> 
+    <h3>3-market / Вешалка автомобильная </h3> <div>
+<p>
+	Вешалка автомобильная, незаменимый помошник для перевозки одежды в машине.<br> Вешалка в автомобиль изготовлена из высококачественной нержавеющей стали, поэтому прочная и прослужит долгий срок. Вешалка в авто покрыта сверху мягким материалом PVA, экологически чистый и безопасный материал и также не дает повредить вашу одежду во время перевозки. <br>
+	 Вешалка для машины оснащена двумя простыми и надежными креплениями, поэтому установка в автомобиль не составляет никакого труда, очень удобно и функционально. 
+</p>  
+<p>Цена <b>995 руб</b></p>
+</div> 
+    </span><br>
+    <div id="tabs" style="width: 50%;"> <ul> 
+        <li><a href="#tabs-1">Оплетка на руль</a></li> 
+        <li><a href="#tabs-2">Автомобильный держатель телефона</a></li> 
+        <li><a href="#tabs-3">Вешалка автомобильная</a></li> </ul> 
+        <div id="tabs-1"> <h2>Оплетка на руль</h2> 
+          <img src="https://images.wbstatic.net/c516x688/new/15950000/15951923-1.jpg" alt="" style="width: 30%;">
+		  <img src="https://images.wbstatic.net/c516x688/new/15950000/15951923-3.jpg" alt="" style="width: 30%;">
+		  <img src="https://images.wbstatic.net/c516x688/new/15950000/15951923-5.jpg" alt="" style="width: 30%;">
+          <br><br>Стоимость: 1 520 руб <br><br>
+            <button id="btn1">Купить</button></p> 
+          </div> 
+        <div id="tabs-2"> <h2>Автомобильный держатель телефона</h2> 
+          <img src="https://images.wbstatic.net/c516x688/new/12010000/12019059-1.jpg" alt="" style=" width: 30%;">
+		  <img src="https://images.wbstatic.net/c516x688/new/12010000/12019059-3.jpg" alt="" style=" width: 30%;">
+		  <img src="https://images.wbstatic.net/c516x688/new/12010000/12019059-2.jpg" alt="" style=" width: 30%;">
+          <br><br>Стоимость: 539 руб<br><br>
+            <button id="btn2">Купить</button></p> 
+          </div>
+         <div id="tabs-3"> <h2>Вешалка автомобильная</h2> 
+          <img src="https://images.wbstatic.net/c516x688/new/25710000/25713957-2.jpg" alt="" style=" width: 30%;">
+		  <img src="https://images.wbstatic.net/c516x688/new/25710000/25713957-3.jpg" alt="" style=" width: 30%;">
+		  <img src="https://images.wbstatic.net/c516x688/new/25710000/25713957-4.jpg" alt="" style=" width: 30%;">
+          <br><br>Стоимость: 995 руб <br><br>
+            <button id="btn3">купить</button></p> 
+          </div> 
+        </div>
+        <div id="dialog1" title="Купить товар - Оплетка на руль">
+            <form action="">
+              ФИО: <input type="text" size="50"><br><br>
+			  EMAIL: <input type="email"  size="42"> <br><br>
+              Количество: <input type="text" id="kol1" size="42"> <br><br>
+              Дата доставки:  <input type="text" size="39" class="date"><br><br>
+              Адрес: <input type="text" size="48"><br><br>
+            Итоговая цена: <input type="text" size="38" title="Нажмите для отображения цены" id="price1"><br><br>
+            </form>
+            <input type="button" class="puy" value="Купить">
+          </div>
+          <div id="dialog2" title="Купить товар - Автомобильный держатель телефона">
+            <form action="">
+              ФИО: <input type="text" size="50"><br><br>
+			  EMAIL: <input type="email"  size="42"> <br><br>
+              Количество: <input type="text" id="kol2" size="42"> <br><br>
+              Дата доставки:  <input type="text" size="39" class="date"><br><br>
+              Адрес: <input type="text" size="48"><br><br>
+            Итоговая цена: <input type="text" size="38" title="Нажмите для отображения цены" id="price2"><br><br>
+            </form>
+            <input type="button" class="puy" value="Купить">
+          </div>
+          <div id="dialog3" title="Купить товар - Вешалка автомобильная">
+            <form action="">
+              ФИО: <input type="text" size="50"><br><br>
+			  EMAIL: <input type="email"  size="42"> <br><br>
+              Количество: <input type="text" id="kol3" size="42"> <br><br>
+              Дата доставки:  <input type="text" size="39" class="date"><br><br>
+              Адрес: <input type="text" size="48"><br><br>
+            Итоговая цена: <input type="text" size="38" title="Нажмите для отображения цены" id="price3"><br><br>
+            </form>
+            <input type="button" class="puy" value="Купить">
+          </div>
+          <div class="dia" title="Спасибо за заказ!">Спасибо за покупку, покупайте еще и ездите с удовольствием!</div>
+    <div class="ok" title="Помогите нам стать лучше">Пожалуйста, оцените уровень ассортимента: <p style="display: inline;" class="sliderValue"></p><br><br><div class="slider" style="width: 100%;"></div></div>
+<script>
+     $(function(){
+          $( function() {
+            $(".puy" ).click(function(){
+		$('.dia').dialog('open'); })
+	$('.dia').dialog({ autoOpen: false, width: 500, buttons:{
+        "Ок": function(){ $( ".ok" ).dialog('open'),$('.dia').dialog('close');   }
+    }})
+    $('.slider').slider({
+		    min: 0,
+	    	max: 100,
+        change: function (event, ui){
+            var val = $('.slider').slider('value');
+            $('.sliderValue').html(val);
+        }
+    });
+	$( ".ok" ).dialog({autoOpen: false, width: 300, buttons:{
+		"Спасибо!": function(){ $( ".ok" ).dialog('close'), $('#dialog1').dialog('close'),  $('#dialog2').dialog('close'),$('#dialog3').dialog('close')}
+	}}); 
+    $( document ).tooltip();
+  } );
+  $("#accordion" ).accordion({  collapsible: true });  
+          $('#tabs').tabs(); 
+          $('#dialog1').dialog({ autoOpen: false, width: 500 });
+      $('#dialog2').dialog({ autoOpen: false, width: 500 });
+      $('#dialog3').dialog({ autoOpen: false, width: 500 });
+
+        $("#btn1").click(function(){ 
+        $( "#dialog1" ).dialog('open'); 
+      })
+      $("#btn2").click(function(){ 
+        $( "#dialog2" ).dialog('open'); 
+      })
+      $("#btn3").click(function(){ 
+        $( "#dialog3" ).dialog('open'); 
+      })
+      $.datepicker.regional['ru'] = {
+	closeText: 'Закрыть',
+	prevText: 'Предыдущий',
+	nextText: 'Следующий',
+	currentText: 'Сегодня',
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	weekHeader: 'Не',
+	dateFormat: 'dd.mm.yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''
+};
+	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+		  $(".date").datepicker({ });
+          var kol = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]; 
+	  $("#kol1" ).click(function(){
+		$("#kol1").autocomplete({ source: kol });
+        
+	});
+    $("#kol2" ).click(function(){
+		$("#kol2").autocomplete({ source: kol });
+        
+	});
+    $("#kol3" ).click(function(){
+		$("#kol3").autocomplete({ source: kol });
+        
+	});
+    $("#price1" ).click(function(){
+    var k = document.getElementById("kol1").value;
+    var price = 1520*k;
+    document.getElementById('price1').value = price;
+  })
+  $("#price2" ).click(function(){
+    var k = document.getElementById("kol2").value;
+    var price = 549*k;
+    document.getElementById('price2').value = price;
+  })
+  $("#price3" ).click(function(){
+    var k = document.getElementById("kol3").value;
+    var price =995*k;
+    document.getElementById('price3').value = price;
+  })
+     })
+ </script>
+					 </div>
+			</body>
+	</html> 
