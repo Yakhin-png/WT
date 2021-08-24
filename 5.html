@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>ЯХИН ПИ320</title>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<style>
+		body {
+			background-color: royalblue;
+		}
+		.container {
+			background-color: snow;
+			border: 5px solid steelblue;
+			border-radius: 5px;
+			padding: 20px;
+		}
+		a {
+			font-size: larger;
+			color: royalblue;
+		}
+		.button {
+			border: 5px solid steelblue;
+			background-color: steelblue;
+			border-radius: 5px;
+			color: snow;
+			padding: 10px;
+			font-size: larger;
+		}
+    .btn {
+      padding: 80px;
+      font-size: 35px;
+      border-radius: 300px;
+      color: steelblue;
+      background-color: cornsilk;
+      border-color: crimson;
+      width: 500px;
+    }
+    #time {
+      font-size: 32px;
+      font-weight: 600;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      width: 500px;
+      text-align: center;
+    }
+    .cnt1 {
+      font-size: 24px;
+      font-weight: 400;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: coral;
+width: 500px;
+text-align: center;
+    }
+	</style>
+  	<script src="jquery.myPlugin.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Яхин А.Р.</h1>
+<div id="time"></div>
+<section>
+  <button class="btn" id="btt">Нажми!</button><br><br>
+  <div class="cnt1">Счет: <span class="cnt">0</span></div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="jquery-ui.js"></script>   
+<div class="go" title="Добро пожаловать в игру Яхина Азамата">Потренируйте свое умение быстро нажимать на мышку! В течении 5 секунд нажимайте на кнопку как можно чаще. Но будьте аккурaтны и не сломайте мышь)))</div>
+<div class="dia" title="Игра закончена!">Время закончилось! Вы нажали на кнопку <span id=summa></span> раз (-a)!</div>
+<script language=javascript>
+  	$('.go').dialog({ width: 500, buttons:{
+        "Начать!": function(){ $('.go').dialog('close'), doj();   }
+    }})
+  	$('.dia').dialog({ autoOpen: false, width: 500, buttons:{
+        "Еще раз!": function(){ $('.dia').dialog('close'), window.location.reload();   }
+    }})
+    function doj() {
+      document.querySelectorAll('section .btn')
+        .forEach(function go(el){ 
+          el.onclick = function() {
+            let cnt = this.closest('section').querySelector('.cnt');
+            cnt.innerText = parseInt(cnt.innerText, 10)+1;
+            document.getElementById('summa').innerHTML = cnt.innerText;
+          };
+        });
+      const display = document.getElementById('time');
+      const fiveminutes = 6 * 1000;
+      
+      function timer(endTime) {
+        var myTimer = setInterval(function() {
+          let now = new Date().getTime();
+          let diff = endTime - now;
+          let seconds = Math.floor(diff % (1000 * 6) / 1000);
+          seconds = seconds < 10 ? `0${seconds}` : seconds;
+          display.textContent = "00 : " + (seconds);
+          if (diff <= 0) {
+            display.textContent = "Время закончилось!!!";
+            clearInterval(myTimer);
+            $('.dia').dialog('open');
+            let btn = document.getElementById('btt');
+      btn.setAttribute('disabled', true);
+          }
+        }, 100);
+      }
+      window.onload = timer(new Date().getTime() + fiveminutes);
+    }
+       
+</script>
+					 </div>
+			</body>
+	</html> 
